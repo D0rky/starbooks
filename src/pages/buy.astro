@@ -1,0 +1,35 @@
+---
+import MainLayout from '../layouts/Layout.astro'
+---
+
+
+<MainLayout>
+    <div class="buy">
+        <h1>Buy You Set of Books</h1>
+
+
+        <noscript>
+            Javascript is required for using this page.
+        </noscript>
+
+        <div class="books">
+            <p>List of Books here.</p>
+            <p>Shopping cart here</p>
+        </div>
+    </div>
+</MainLayout>
+
+
+<style>
+    .buy{
+        padding: 3rem 5%;
+    }
+
+    .books {
+        align-items: start;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 260px;
+        position: relative;
+    }
+</style>
