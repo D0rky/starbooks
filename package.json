@@ -19,7 +19,7 @@
 		"astro": "^2.10.7",
 		"express": "^4.18.2",
 		"markdown-it": "^13.0.1",
-		"nanostores": "^0.9.3",
+		"nanostores": "^0.9.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"sanitize-html": "^2.11.0",
