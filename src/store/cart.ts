@@ -1,6 +1,6 @@
 import {computed, map} from 'nanostores'
 import type { Book, CartItem } from '../types'
-import { object } from 'astro/zod';
+
 
 export const $cart = map<Record<number, CartItem>>({});
 
