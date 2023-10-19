@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/pageLayout.astro'
+import NotFoundImage from '../images/404.jpg'
+---
+
+
+<Layout>
+    <section class="not-found">
+        <h1>404: Page not found!</h1>
+        <img
+            src={NotFoundImage}
+            alt="stack-of-six-brown-hardbound-books"
+            class="banner-image"
+            loading="eager"
+        />
+
+        <p>It appears that the page you are seeking cannot be found</p>
+        <p><a href="/">⬅️ Home</a></p>
+
+    </section>
+</Layout>
+
+
+<style>
+    .not-found {
+      margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    max-width: 500px;
+    text-align: center;
+  
+  }
+  
+  .not-found h1 {
+      font-size: 2rem;
+  }
+  
+  .not-found img {
+    display: block;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 100%;
+  
+  }
+  </style>

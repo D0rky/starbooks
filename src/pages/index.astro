@@ -1,0 +1,166 @@
+---
+import MainLayout from '../layouts/Layout.astro'
+import heroImage from '../images/book-main.jpg'
+---
+
+
+<MainLayout>
+
+	<section class="container banner">
+		<div class="title">
+			<h1>Every Book You Wish</h1>
+			<p class="text">The most popular book shop in the wile universe</p>
+			<a href="/buy" class="button-link">Buy Books</a>
+		</div>
+
+		<img src={heroImage} alt="Book-with-yellow background" class="banner-image"/>
+	</section>
+
+</MainLayout>
+
+<style>
+	.banner {
+	aspect-ratio: 2.1 / 3;
+	display: flex;
+	overflow: hidden;
+	padding: 1rem 5% 40%;
+	position: relative;
+}
+
+.banner :not(.banner-image) {
+	position: relative;
+	z-index: 10;
+}
+
+.title {
+	max-width: 400px;
+}
+
+.banner h1 {
+	font-size: clamp(1.75rem, 10vw, 2.5rem);
+	margin: 0;
+}
+
+.text {
+	font-size: clamp(1rem, 5.75vw, 1.5rem);
+	line-height: 1.25;
+	margin: 0.5rem 0 0;
+}
+
+.banner-image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	object-fit: fill;
+	object-position: 28% 0%;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.books-link {
+	text-align: center;
+}
+
+
+.newsletter {
+	background-color: var(--primary-gray-100);
+	align-items: center;
+	display: flex;
+	gap: 2rem;
+}
+
+.newsletter h3 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.newsletter img {
+	aspect-ratio: 1;
+	display: none;
+	width: min(30%, 250px);
+}
+
+.newsletter-form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.newsletter-form label {
+	display: block;
+	font-size: 0.75rem;
+}
+
+.newsletter-form input {
+	display: block;
+	font-size: 1rem;
+	height: 2.125rem;
+	padding: 0.25rem 0.5rem;
+	width: 100%;
+}
+
+
+@media (min-width: 440px) {
+	.banner {
+		aspect-ratio: 4 / 5;
+	}
+
+	.banner-image {
+		height: 120%;
+		object-position: 35% 50%;
+		width: 120%;
+	}
+
+	.newsletter img {
+		display: block;
+	}
+}
+
+@media (min-width: 600px) {
+	.banner {
+		align-items: center;
+		aspect-ratio: 3 / 2;
+		justify-content: flex-end;
+		padding: 2rem 5%;
+	}
+
+	.banner-image {
+		height: 110%;
+		object-fit: fill;
+		object-position: 65% 50%;
+		width: 100%;
+	}
+}
+
+@media (min-width: 900px) {
+	.banner {
+		aspect-ratio: 2.6 / 1;
+	}
+
+	.banner-image {
+		height: 100%;
+		object-position: 50% 50%;
+	}
+
+	.newsletter-form {
+		align-items: flex-end;
+		flex-direction: row;
+	}
+
+	.newsletter-form label {
+		width: 30%;
+	}
+}
+
+
+@media (min-width: 1200px) {
+	.banner {
+		justify-content: flex-start;
+		padding-left: 60%;
+	}
+}
+</style>
